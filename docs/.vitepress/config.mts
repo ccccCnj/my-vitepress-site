@@ -1,4 +1,6 @@
-export default {
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
   lang: 'zh-CN',
   title: '我的文档',
   description: '这是一个基于 VitePress 构建的现代化文档站点',
@@ -8,6 +10,7 @@ export default {
 
   // 配置base路径，因为仓库名不是 your-username.github.io
   base: '/my-vitepress-site/',
+  lastUpdated: true,
 
   locales: {
     root: {
@@ -15,17 +18,46 @@ export default {
       lang: 'zh-CN',
       title: '我的文档',
       description: '这是一个中文文档站点',
+      themeConfig: {
+        editLink: {
+          pattern: 'https://github.com/smileCccc/my-vitepress-site/edit/main/docs/:path',
+          text: '在 GitHub 上编辑此页面'
+        },
+        lastUpdatedText: '最近更新于',
+        outlineTitle: '页面导航',
+        docFooter: {
+          prev: '上一页',
+          next: '下一页'
+        },
+        returnToTopLabel: '返回顶部'
+      }
     },
     en: {
       label: 'English',
       lang: 'en-US',
       title: 'My Docs',
       description: 'This is an English documentation site',
-    },
+      themeConfig: {
+        editLink: {
+          pattern: 'https://github.com/smileCccc/my-vitepress-site/edit/main/docs/:path',
+          text: 'Edit this page on GitHub'
+        },
+        lastUpdatedText: 'Last updated on',
+        outlineTitle: 'On this page',
+        docFooter: {
+          prev: 'Previous',
+          next: 'Next'
+        },
+        returnToTopLabel: 'Back to top'
+      }
+    }
   },
 
   themeConfig: {
-    // 搜索配置
+    logo: undefined,
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/smileCccc/my-vitepress-site' }
+    ],
     search: {
       provider: 'local',
       options: {
@@ -67,8 +99,6 @@ export default {
         }
       }
     },
-
-    // 全局侧边栏配置
     sidebar: {
       '/': [
         {
@@ -91,48 +121,9 @@ export default {
         },
       ],
     },
-
-    // 多语言配置
-    locales: {
-      root: {
-        nav: [
-          { text: '指南', link: '/guide' },
-          { text: '常见问题', link: '/faq' },
-        ],
-        // 中文UI翻译
-        outlineTitle: '页面导航',
-        lastUpdatedText: '最后更新',
-        docFooter: {
-          prev: '上一页',
-          next: '下一页'
-        },
-        returnToTopLabel: '返回顶部'
-      },
-      en: {
-        nav: [
-          { text: 'Guide', link: '/en/guide' },
-          { text: 'FAQ', link: '/en/faq' },
-        ],
-        // 英文UI翻译
-        outlineTitle: 'On this page',
-        lastUpdatedText: 'Last updated',
-        docFooter: {
-          prev: 'Previous',
-          next: 'Next'
-        },
-        returnToTopLabel: 'Back to top'
-      },
-    },
-
-    // 社交链接
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/smileCccc/my-vitepress-site' }
-    ],
-
-    // 页脚
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2024-present'
     }
-  },
-}
+  }
+})
