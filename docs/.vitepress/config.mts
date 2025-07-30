@@ -10,6 +10,8 @@ export default defineConfig({
 
   // 配置base路径，因为仓库名不是 your-username.github.io
   base: '/my-vitepress-site/',
+
+  // 显示更新时间
   lastUpdated: true,
 
   locales: {
