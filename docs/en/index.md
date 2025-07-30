@@ -1,7 +1,3 @@
----
-title: Welcome to My Documentation Site
-description: This is a modern documentation site built with VitePress, supporting both Chinese and English languages
----
 
 # Welcome to My Documentation Site
 
