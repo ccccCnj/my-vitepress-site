@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: '我的文档',
+  title: 'ABCProxy',
   description: '这是一个基于 VitePress 构建的现代化文档站点',
   
   // 移除URL中的.html后缀
@@ -18,15 +18,19 @@ export default defineConfig({
     root: {
       label: '简体中文',
       lang: 'zh-CN',
-      title: '我的文档',
+      title: 'ABCProxy',
       description: '这是一个中文文档站点',
       themeConfig: {
         editLink: {
           pattern: 'https://github.com/smileCccc/my-vitepress-site/edit/main/docs/:path',
           text: '在 GitHub 上编辑此页面'
         },
-        lastUpdatedText: '最近更新于',
-        outlineTitle: '页面导航',
+        lastUpdated: {
+          text: '最近更新于'
+        },
+        outline: {
+          label: '页面导航'
+        },
         docFooter: {
           prev: '上一页',
           next: '下一页'
@@ -37,15 +41,19 @@ export default defineConfig({
     en: {
       label: 'English',
       lang: 'en-US',
-      title: 'My Docs',
+      title: 'ABCProxy',
       description: 'This is an English documentation site',
       themeConfig: {
         editLink: {
           pattern: 'https://github.com/smileCccc/my-vitepress-site/edit/main/docs/:path',
           text: 'Edit this page on GitHub'
         },
-        lastUpdatedText: 'Last updated on',
-        outlineTitle: 'On this page',
+        lastUpdated: {
+          text: 'Last updated on'
+        },
+        outline: {
+          label: 'On this page'
+        },
         docFooter: {
           prev: 'Previous',
           next: 'Next'
