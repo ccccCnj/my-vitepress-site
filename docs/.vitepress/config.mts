@@ -112,22 +112,47 @@ export default defineConfig({
     sidebar: {
       '/': [
         {
-          text: '中文文档',
-          items: [
-            { text: '首页', link: '/' },
-            { text: '使用指南', link: '/guide' },
-            { text: '常见问题', link: '/faq' },
+          items:[
+              { text: '概述', link: '/overview' },
           ],
+        },
+        {
+          text: '代理',
+          items: [
+            { text: '住宅代理', link: '/' },
+            { text: '静态住宅代理', link: '/guide' },
+          ],
+          collapsed: false
+        },
+        {
+          text: 'FAQ',
+          items: [
+            { text: '产品问题', link: '/faq' },
+          ],
+          collapsed: false
         },
       ],
       '/en/': [
         {
-          text: 'English Docs',
-          items: [
-            { text: 'Home', link: '/en/' },
-            { text: 'Guide', link: '/en/guide' },
-            { text: 'FAQ', link: '/en/faq' },
+          items:[
+            { text: 'Overview', link: '/en/overview' },
           ],
+          collapsed: false
+        },
+        {
+          text: 'Proxies',
+          items: [
+            { text: 'Residential Proxies', link: '/en/' },
+            { text: 'Static Residential Proxies', link: '/en/guide' },
+          ],
+          collapsed: false
+        },
+        {
+          text: 'FAQ',
+          items: [
+            { text: 'Product', link: '/en/faq' },
+          ],
+          collapsed: false
         },
       ],
     },
