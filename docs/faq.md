@@ -128,7 +128,3 @@ A: 可以尝试以下方法：
 2. 使用 CDN 加速
 3. 压缩图片资源
 4. 启用 gzip 压缩
-
-
-![微信图片_20250307100332](https://github.com/user-attachments/assets/53ec11a8-faf7-42d0-a757-7a3aa63fae70)
-
